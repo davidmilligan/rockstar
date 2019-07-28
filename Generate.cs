@@ -14,11 +14,12 @@ namespace rockstar
             var lines = File.ReadAllLines("quine.template.rock");
             using var output = new StreamWriter(File.Open("quine.rock", FileMode.Create));
             output.WriteLine(lines[0]);
-            foreach (var line in lines.Skip(1))
+            output.WriteLine(lines[1]);
+            foreach (var line in lines.Skip(2))
             {
                 if (!line.StartsWith("(")) //remove comments
                 {
-                    output.Write("Rock your world with ");
+                    output.Write("Rock my world with ");
                     foreach (var ch in line.Trim())
                     {
                         output.Write((int)ch + ", ");
@@ -26,7 +27,7 @@ namespace rockstar
                     output.WriteLine("10");
                 }
             }
-            foreach (var line in lines.Skip(1))
+            foreach (var line in lines.Skip(2))
             {
                 if (!line.StartsWith("("))
                 {
