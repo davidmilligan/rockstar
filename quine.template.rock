@@ -2,8 +2,8 @@ My world is empty
 Rock my world
 (quine data will go here, just do 'dotnet run' in this directory, quine.rock will be overwritten)
 Rock my world with nothing
-Say "My world is empty"
-Say "Rock my world"
+Shout "My world is empty"
+Shout "Rock my world"
 (print out the quine data as it appears at the top of the program)
 My love is gone
 Rock my love
