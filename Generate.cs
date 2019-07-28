@@ -14,8 +14,7 @@ namespace rockstar
             var lines = File.ReadAllLines("quine.template.rock");
             using var output = new StreamWriter(File.Open("quine.rock", FileMode.Create));
             output.WriteLine(lines[0]);
-            output.WriteLine(lines[1]);
-            foreach (var line in lines.Skip(2))
+            foreach (var line in lines.Skip(1))
             {
                 if (!line.StartsWith("(")) //remove comments
                 {
@@ -27,7 +26,7 @@ namespace rockstar
                     output.WriteLine("10");
                 }
             }
-            foreach (var line in lines.Skip(2))
+            foreach (var line in lines.Skip(1))
             {
                 if (!line.StartsWith("("))
                 {
